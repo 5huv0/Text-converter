@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 export default function About() {
 
     const[myStyle, setMyStyle] = useState({
-        color: 'white',
-        backgroundColor: 'black'
+        color: 'black',
+        backgroundColor: 'white'
     }) 
 
-    const[btnTxt, setBtnTxt] = useState('Enable Dark Mode')
+    const[btnTxt, setBtnTxt] = useState('Enable Dark Mode')  // Here btnTxt is the name of the variable and setBtnTxt is to change the btnTxt and  useState is the initial value
     
     const toggle = ()=>{
         if(myStyle.color == 'white'){
@@ -15,14 +15,14 @@ export default function About() {
                 color: 'black',
                 backgroundColor: 'white'
             })
-            setBtnTxt('Enable Light Mode')
+            setBtnTxt('Enable Dark Mode')
         }
         else{
             setMyStyle({
                 color: 'white',
                 backgroundColor: 'black'
             })
-            setBtnTxt('Enable Dark Mode')
+            setBtnTxt('Enable Light Mode')
         }
     }
 
@@ -67,7 +67,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className="container my-3">
-                    <button type="button" onClick={toggle} className="btn btn-success">{btnTxt}</button>
+                    <button type="button" onClick={toggle} className="btn btn-danger">{btnTxt}</button>
                 </div>
             </div>
         </div>
