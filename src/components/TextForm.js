@@ -24,10 +24,10 @@ export default function TextForm(props) {
     const [text, setText] = useState('');
     return (
         <>
-        <div className='container'>
+        <div className='container' style={{ color:props.mode==='dark'?'white':'#042743'}}>
             <h1>{props.heading}</h1>
             <div>
-                <textarea className="form-control" value = {text} onChange = {handleOnChange} id="myBox" rows="7"></textarea>
+                <textarea className="form-control" value = {text} style={{backgroundColor:props.mode==='dark'?'grey':'white', color:props.mode==='dark'?'white':'#042743'}} onChange = {handleOnChange} id="myBox" rows="7"></textarea>
                 <div className="buttons">
                     <button type="button" className="btn btn-primary" onClick={handleUpCase}>To UpperCase</button>
                     <button type="button" className="btn btn-secondary" onClick={handleLowerCase}>To Lower Case</button>
@@ -35,7 +35,7 @@ export default function TextForm(props) {
                 </div>
             </div>
         </div>
-        <div className='container my-3'>
+        <div className='container my-3' style={{ color:props.mode==='dark'?'white':'#042743'}}    >
             <h1>Your text total words and characters</h1>
             <p>{text.split(" ").length} words & {text.length} characters</p> 
             <p>{.08 * text.split(" ").length} Minutes To Read It Fully</p> 
