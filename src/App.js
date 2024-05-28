@@ -43,7 +43,7 @@ function App() {
       <Alert alert = {alert}/>
 
       <div className = "container">
-        <TextForm heading = "Text here" mode = {mode}/>
+        <TextForm heading = "Text here" showAlert = {showAlert} mode = {mode}/>
       </div>
 
       {/* <div className="container">
